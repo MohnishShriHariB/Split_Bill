@@ -1,0 +1,11 @@
+{% extends 'sbill/base.html' %}
+{% block content %}
+<h2>TRIPS</h2>
+<ul>
+{% for a in trips %}
+  <li><a href="{% url 'trippage' a.id %}" >{{a.trip_name}}</a></li>
+{% endfor %}
+</ul>
+<a href="{% url 'addtrip' %}"><button type="Submit">ADD TRIP</button></a>
+
+{% endblock %}
